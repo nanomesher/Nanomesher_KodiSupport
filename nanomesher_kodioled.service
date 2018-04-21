@@ -1,0 +1,10 @@
+[Unit]
+Description=Nanomesher Kodi OLED Display Service
+
+[Service]
+ExecStart=/home/osmc/Nanomesher_KodiSupport/python/nanomesher_kodioled.py
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+Alias=nanomesher_kodioled.service
