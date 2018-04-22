@@ -22,7 +22,8 @@ hasOLED=True
 
 #device = ssd1306(serial, rotate=0)
 #try:
-device = sh1106(port=1, address=0x3C)
+device = ssd1306(port=1, address=0x3C)
+#device = sh1106(port=1, address=0x3C)
 hasOLED = True
 #except:
 #	hasOLED = False
@@ -112,8 +113,8 @@ while(not hasOLED):
 try:
    if(hasOLED):
       with canvas(device) as draw:
-         draw.text((5, 2), "Nanomesher for Kodi",font=font1, fill="white")
-         draw.text((5, 18), "v0.1",font=font1, fill="white")
+         draw.text((1, 2), "Nanomesher for Kodi",font=font1, fill="white")
+         draw.text((1, 18), "v0.1",font=font1, fill="white")
 		 
          draw.text((1, 36), GetLANIP(),font=font1, fill="white")
          draw.text((1, 50), GetWLANIP(),font=font1, fill="white")
